@@ -1,0 +1,57 @@
+
+* {
+    text-align: center;
+    background-color: rgb(34, 34, 44);
+}
+
+.weather-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    
+  }
+  
+  .weather-input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    width: 200px;
+  }
+  
+  .weather-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .weather-button:hover {
+    background-color: #45a049;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 16px;
+  }
+  
+  .weather-info {
+    margin-top: 20px;
+  }
+  
+  .weather-info h3 {
+    font-size: 24px;
+    color: red;
+  }
+  
+  .weather-info p {
+    font-size: 18px;
+    color: red;
+  }
+  
+  .weather-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
