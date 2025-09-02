@@ -4,51 +4,56 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+# Weather App
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Este é um projeto de aplicativo de previsão do tempo desenvolvido com React, TypeScript e Vite.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Funcionalidades
+- Consulta de previsão do tempo usando a API do OpenWeatherMap (ou outra API configurada)
+- Interface moderna e responsiva
+- Busca por cidade
+
+## Tecnologias Utilizadas
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Axios](https://axios-http.com/)
+
+## Como rodar o projeto
+
+1. Instale as dependências:
+   ```powershell
+   npm install
+   ```
+
+2. Inicie o servidor de desenvolvimento:
+   ```powershell
+   npm run dev
+   ```
+
+3. Acesse o app em [http://localhost:5173](http://localhost:5173) ou conforme indicado no terminal.
+
+## Estrutura de Pastas
+```
+src/
+  App.tsx         # Componente principal
+  components/
+    Weather.tsx   # Componente de previsão do tempo
+  assets/         # Imagens e ícones
+public/           # Arquivos estáticos
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Configuração da API
+Para utilizar a API de previsão do tempo, obtenha uma chave de API gratuita no [OpenWeatherMap](https://openweathermap.org/api) e configure no código conforme necessário.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts Disponíveis
+- `npm run dev` — Inicia o servidor de desenvolvimento
+- `npm run build` — Gera a versão de produção
+- `npm run preview` — Visualiza a versão de produção
+- `npm run lint` — Executa o linter
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Licença
+Este projeto é apenas para fins de estudo.
+
+
